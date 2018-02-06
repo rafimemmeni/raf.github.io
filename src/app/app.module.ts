@@ -10,7 +10,8 @@ import { MessageServiceService } from './message-service.service';
 import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './message.service';
 import { AppRoutingModule } from './/app-routing.module';
-
+import {HttpClientModule} from '@angular/common/http';
+import { HttpclientComponent } from './httpclient/httpclient.component'; 
 
 
 @NgModule({
@@ -18,12 +19,14 @@ import { AppRoutingModule } from './/app-routing.module';
     AppComponent,
     HeroesComponent,
     HeroDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    HttpclientComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [HeroService,MessageServiceService, MessageService],
   bootstrap: [AppComponent]
